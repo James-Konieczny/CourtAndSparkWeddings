@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>Court & Spark Weddings</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <link rel="stylesheet" href="style/styles.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
+    </head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-md navbar-light fixed-top" style="background-color: #1A4D1A;">
+      <div class="container-fluid">
+        <div id="logo">
+          <a class="navbar-brand" href="index.html">
+            <img src="images/logo.jpeg" alt="Court and Spark Weddings logo">
+          </a>
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #fff;">Home</a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="index.html#About_Us">About Us</a>
+                <a class="dropdown-item" href="index.html#Reviews">Reviews</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="packagesandpricing.html" style="color: #fff;">Packages</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="portfolio.html" style="color: #fff;">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="contact.html" style="color: #fff;">Contact</a>
+            </li>
+          </ul>
+          <div class="navbar-nav ml-auto d-flex align-items-center">
+            <a href="https://www.instagram.com/courtandsparkweddings" class="nav-link p-0" style="color: #fff;">
+              <img class="rounded-circle" src="images/rabbit.jpeg" alt="Instagram Icon" width="50" height="50"> @courtandsparkweddings
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="flex-shrink-0">
+    <div id="contactcontainer">
+   <div id="contacthead" class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center">
+      <div class="col-md-5 p-lg-0 mx-auto my-5">
+        <h1 class="display-4 font-weight-normal">Contact Us</h1>
+        <p class="lead font-weight-normal">We'd love to work with you! Send us an email to get in touch.</p>
+      </div>
+      <img src="images/contactheader.jpg" class="img-fluid" alt="Red Rose bouquet, held by bride standing next to groom">
+    </div>
+    </div>
+    <div class="container">
+      <form id="contactform" name="contactform">
+        <div class="form-group row justify-content-md-center">
+          <h4 id="formheader" class="col-md-auto">Send Us an Email to courtandsparkweddings@gmail.com</h4>
+        </div>
+        <div class="form-group row">
+            <label for="your_name" class="col-sm-2 col-form-label">Your Name</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="your_name" name="your_name" maxlength="50">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="fiancés_name" class="col-sm-2 col-form-label">Fiancé's Name</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="fiancés_name" name="fiancés_name" maxlength="50">
+            </div>
+        </div>
+        <div class="form-group row">
+          <label for="wedding_date" class="col-sm-2 col-form-label">Wedding date</label>
+          <div class="col-sm-10">
+              <input type="date" class="form-control" id="wedding_date" name="wedding_date">
+          </div>
+      </div>
+        <div class="form-group row">
+            <label for="email" class="col-sm-2 col-form-label">Email Address</label>
+            <div class="col-sm-10">
+                <input type="email" class="form-control" id="email" name="email" maxlength="80">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="telephone" class="col-sm-2 col-form-label">Telephone Number</label>
+            <div class="col-sm-10">
+                <input type="tel" class="form-control" id="telephone" name="telephone" maxlength="30">
+            </div>
+        </div>
+        <div class="form-group row">
+          <label for="desired_package" class="col-sm-2 col-form-label">Desired Package</label>
+          <div class="col-sm-10">
+            <select class="custom-select" id="desired_package" name="desired_package">
+              <option selected>Packages</option>
+              <option value="1">The "Elopement"</option>
+              <option value="2">The "Intimate"</option>
+              <option value="3">The "Timeless"</option>
+              <option value="4">The "Fairytale"</option>
+              <option value="5">Custom</option>
+            </select>
+            <a href="packagesandpricing.html" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">View Details</a>
+          </div>
+      </div>
+        <div class="form-group row">
+            <label for="comments" class="col-sm-2 col-form-label">Comments</label>
+            <div class="col-sm-10">
+                <textarea class="form-control" id="comments" name="comments" maxlength="1000" rows="6"></textarea>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-12 text-center">
+                <button type="submit" class="btn">Submit</button>
+            </div>
+        </div>
+    </form>
+</div>
+<footer class="container d-flex justify-content-between align-items-center">
+  <p class="mb-0">Court & Spark Weddings</p>
+  <p class="mb-0 text-center flex-grow-1">
+    Visit Our Instagram Page
+    <a id="instalink" href="https://www.instagram.com/courtandsparkweddings">@courtandsparkweddings</a>
+  </p>
+  <p class="mb-0">
+    <a id="pcontact" href="contact.html">Back to top</a>
+  </p>
+</footer>
+
+</main>
+
+  <script>
+    document.getElementById("contactform").onsubmit = function() {
+        var yourName = document.getElementsByName("your_name")[0].value;
+        var fiancesName = document.getElementsByName("fiancés_name")[0].value;
+        var weddingDate = document.getElementsByName("wedding_date")[0].value;
+        var email = document.getElementsByName("email")[0].value;
+        var telephone = document.getElementsByName("telephone")[0].value;
+        var desiredPackageSelect = document.getElementsByName("desired_package")[0];
+        var desiredPackage = desiredPackageSelect.options[desiredPackageSelect.selectedIndex].text;
+        var comments = document.getElementsByName("comments")[0].value;
+
+        var mailtoLink = "mailto:courtandsparkweddings@gmail.com" +
+            "?subject=" + encodeURIComponent("Contact Form Submission") +
+            "&body=" + encodeURIComponent("Names: " + yourName + " & " + fiancesName +
+            "\nWedding Date: " + weddingDate +
+            "\nEmail: " + email +
+            "\nTelephone: " + telephone +
+            "\nPackage: " + desiredPackage +
+            "\nComments: " + comments);
+
+        window.location.href = mailtoLink;
+
+        return false;
+    };
+</script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script> 
+    <script src="scripts/script.js"></script>  
+</body>
+</html>

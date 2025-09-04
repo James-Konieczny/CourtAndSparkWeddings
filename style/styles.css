@@ -1,0 +1,145 @@
+html{
+    background-image: url(../images/background.jpeg);
+}
+#logo{
+    height: 3em;
+}
+#logo img {
+    height: 3em;
+    box-shadow: 0px 0px 80px 0px rgba(23,68,23,0.75);
+}
+.nav-item {
+        font-family: "MedievalSharp", cursive;
+        font-weight: 400;
+        font-style: normal;
+    text-shadow: #174417 2px 2px 0px, #2E882E 4px 4px 0px;
+}
+.dropdown-item {
+    text-shadow: none;
+    font-family: Georgia, serif !important;
+    color: #1A4D1A !important;
+}
+main{
+    margin-top: 4em;
+    background-image: url(../images/background.jpeg)
+}
+#indexmain {
+    font-family: "MedievalSharp", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+}
+#headshotB, #headshotC, #headshotM {
+    border-radius: 45% 45% 0 0;
+    object-fit: cover;
+    border: 5px solid #BC9D22;
+}
+@media (max-width: 768px) {
+    .featurette .col-md-5,
+    .featurette .col-md-7 {
+      text-align: center; /* Center-align content for smaller screens */
+    }
+  }
+#reviewimage1, #reviewimage2, #reviewimage3, #reviewimage4 {
+    border: 2px solid #BC9D22;
+}
+#contactcontainer {
+    padding: 1em;
+}
+#contacthead {
+    background-color: rgba(255,255,255,0.2);
+    border-radius: 500px 500px 0px 0px;
+    font-family: "MedievalSharp", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color: #fff;
+}
+#contactform{
+    padding: 50px;
+    border: 10px ridge #DDB944;
+    border-radius: 100px 100px 10px 10px;
+    font-family: "MedievalSharp", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: large;
+    letter-spacing: 0px;
+    word-spacing: 2px;
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    font-variant: normal;   
+    text-transform: none;
+}
+#formheader {
+    word-wrap: break-word;
+  overflow-wrap: break-word;
+  margin: 0;
+  padding: 10px;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  box-sizing: border-box;
+}
+input, textarea {
+    outline: #BC9D22 !important;
+}
+#your_name, #fiancés_name, #email, #telephone, #comments {
+    color: rgb(80, 80, 80);
+}
+button, .btn {
+    background-color: #BC9D22 !important;
+    color: white;
+    font-family: "MedievalSharp", cursive;
+}
+#ptitle {
+    font-family: "MedievalSharp", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color: #BC9D22 !important;
+}
+#psub {
+    font-family: "MedievalSharp", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color: #DDB944 !important;
+}
+#packages {
+    font-family: "MedievalSharp", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    background-color: #215335;
+    padding: 20px;
+}
+#pcontact, #pcontactPackages, #pcontactSpotify {
+    color: #BC9D22 !important;
+    font-size: large;
+}
+#pricesE, #pricesI, #pricesT, #pricesF {
+    font-size: x-large;
+}
+#goldpattern {
+    transform: rotate(350deg);
+    max-width: 100%;
+}
+#goldpattern2 {
+    transform: rotate(10deg);
+    max-width: 100%;
+}
+#photogallary {
+    background-color: rgba(255,255,255,0.25);
+}  
+#portfoliohead {
+    font-family: "MedievalSharp", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+}
+footer {
+    font-family: "MedievalSharp", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color: #fff;
+}
+#instalink {
+    color: #fff;
+}
