@@ -1,4 +1,4 @@
-html{
+/* html{
     background-image: url(../images/background.jpeg);
 }
 #logo{
@@ -37,9 +37,9 @@ main{
 @media (max-width: 768px) {
     .featurette .col-md-5,
     .featurette .col-md-7 {
-      text-align: center; /* Center-align content for smaller screens */
+      text-align: center;
     }
-  }
+}
 #reviewimage1, #reviewimage2, #reviewimage3, #reviewimage4 {
     border: 2px solid #BC9D22;
 }
@@ -142,4 +142,4 @@ footer {
 }
 #instalink {
     color: #fff;
-}
+} */
