@@ -1,5 +1,3 @@
-// scripts/navigation.js
-
 document.addEventListener("DOMContentLoaded", () => {
   const header = document.getElementById("top");
 

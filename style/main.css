@@ -1,20 +1,28 @@
-/* styles/navigation.css */
+/* Colour Pallette:
+#174417
+#2E882E
+#BC9D22
+#1A4D1A
+#DDB944
+#215335
+*/
 
 /* Make navbar sticky */
 #top {
   position: sticky;
   top: 0;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   background-color: #1A4D1A;
   padding: 0.5em 1em;
   z-index: 1000;
 }
 
-/* .nav-logo img {
-  height: 50px;
-} */
+.logo img {
+  height: 70px;
+  margin-bottom: -50px;
+}
 
 .nav-toggle {
   display: none;
@@ -37,6 +45,26 @@
   color: white;
   text-decoration: none;
 }
+
+#book-button {
+  text-align: center;
+  margin: 2em 0;
+}
+
+#book-button button {
+  background-color: #1A4D1A; /* dark green */
+  color: white;
+  font-size: 1.2em;
+  padding: 0.6em 1.5em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#book-button button:hover {
+  background-color: #145014; /* slightly lighter green */
+}
+
 
 /* Mobile styles */
 @media (max-width: 768px) {
