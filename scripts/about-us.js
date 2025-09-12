@@ -1,5 +1,3 @@
-// scripts/about-us.js
-
 document.addEventListener("DOMContentLoaded", () => {
   const aboutSection = document.getElementById("about-us");
 
@@ -21,9 +19,15 @@ document.addEventListener("DOMContentLoaded", () => {
       "With Love, Sincerely, Courtney & Matthew"
     ],
     headshot: {
-      src: "images/headshotB.jpeg",
+      src: "images/headshotB-800.jpeg",
       alt: "Courtney and Matthew smiling at the camera",
-      id: "headshotB"
+      id: "headshotB",
+      srcset: `
+      images/headshotB-480.jpg 480w,
+      images/headshotB-800.jpg 800w,
+      images/headshotB-1200.jpg 1200w
+      `,
+      sizes: "(max-width: 600px) 480px, (max-width: 900px) 800px, 1200px"
     }
   };
 
@@ -44,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Paragraphs
   aboutConfig.paragraphs.forEach(text => {
     const p = document.createElement("p");
-    p.innerHTML = text; // innerHTML so we can embed <a> links
+    p.innerHTML = text;
     aboutSection.appendChild(p);
   });
 
@@ -53,5 +57,13 @@ document.addEventListener("DOMContentLoaded", () => {
   headshotImg.src = aboutConfig.headshot.src;
   headshotImg.alt = aboutConfig.headshot.alt;
   headshotImg.id = aboutConfig.headshot.id;
+  
+  if (aboutConfig.headshot.srcset) {
+    headshotImg.setAttribute("srcset", aboutConfig.headshot.srcset);
+  }
+  if (aboutConfig.headshot.sizes) {
+    headshotImg.setAttribute("sizes", aboutConfig.headshot.sizes);
+  }
+
   aboutSection.appendChild(headshotImg);
 });

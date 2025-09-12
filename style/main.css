@@ -7,6 +7,10 @@
 #215335
 */
 
+html {
+    background-image: url(../images/background2.jpg);
+}
+
 /* Make navbar sticky */
 #top {
   position: sticky;
