@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const headerEl = document.getElementById("top");
+  if (!headerEl) return;
 
 const navConfig = {
     logo: {
