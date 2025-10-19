@@ -103,3 +103,122 @@ These aren’t DOM elements, but they’re the source of content/attributes:
 .dropdown → dropdown menus
 .nav-instagram → Instagram list item
 #nav-rabbit → decorative rabbit image
+
+
+#top {
+  position: sticky;
+  top: 0;
+  /* display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  background-color: #1A4D1A;
+  padding: 0.5em 1em; */
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #1A4D1A;
+  padding: 0.5em 1em;
+}
+
+.navbar .logo img {
+  height: 70px;
+  margin-bottom: -50px;
+}
+
+.nav-toggle {
+  display: none;
+  font-size: 2em;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1em;
+  margin: 0em 0em 0em 11em;
+  padding: 0;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+#nav-rabbit {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.nav-links li .dropdown {
+  display: none;
+  position: absolute;
+  background-color: #064420;
+  top: 100%;
+  left: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  min-width: 180px;
+  z-index: 1000;
+}
+
+.nav-links li .dropdown li a {
+  padding: 0.5rem 1rem;
+}
+
+.nav-links li:hover .dropdown,
+.nav-links li:focus-within .dropdown {
+  display: block;
+}
+
+#book-button {
+  text-align: center;
+  margin: 2em 0;
+}
+
+#book-button button {
+  background-color: #1A4D1A; /* dark green */
+  color: white;
+  font-size: 1.2em;
+  padding: 0.6em 1.5em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#book-button button:hover {
+  background-color: #145014; /* slightly lighter green */
+}
+
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #1A4D1A;
+    width: 100%;
+    text-align: center;
+  }
+  .nav-links.active {
+    display: flex;
+  }
+  .nav-links li .dropdown {
+    position: static;
+  }
+  .nav-instagram {
+    margin-top: 1em;
+  }
+}

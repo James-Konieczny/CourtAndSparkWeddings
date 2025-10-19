@@ -1,122 +1,212 @@
-/* Colour Pallette:
-#174417
-#2E882E
-#BC9D22
-#1A4D1A
-#DDB944
-#215335
-*/
+/* ----- Main CSS File -----
+  Colour Pallette:
+    #174417 - dark green
+    #1A4D1A - medium green
+    #2E882E - light green
+    #215335 - blue-green
+    #BC9D22 - gold
+    #DDB944 - light gold
+------------------------- */
 
 html {
     background-image: url(../images/background2.jpg);
 }
 
-/* Make navbar sticky */
+/* -----------------------------------
+   Sticky Navbar Wrapper (#top)
+----------------------------------- */
 #top {
   position: sticky;
   top: 0;
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  background-color: #1A4D1A;
-  padding: 0.5em 1em;
   z-index: 1000;
 }
 
-.navbar .logo img {
-  height: 70px;
-  margin-bottom: -50px;
+/* -----------------------------------
+   Main Navbar Container (.navbar)
+----------------------------------- */
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  background-color: #1A4D1A;
+  padding: 0.5em 1em;
 }
 
-.nav-toggle {
+/* -----------------------------------
+   Logo
+----------------------------------- */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 80px;
+  margin-bottom: -50px; 
+}
+
+/* -----------------------------------
+   Left vs Right Navigation Groups
+----------------------------------- */
+.nav-links {
+  display: flex;
+  flex: 1;
+  align-items: center;
+}
+
+.nav-left {
+  gap: 1em;
+}
+
+.nav-right {
+  margin-left: auto;
+}
+
+/* -----------------------------------
+   Hamburger Toggle
+----------------------------------- */
+.nav-menu {
   display: none;
-  font-size: 2em;
+  font-size: 2.5em;
   background: none;
   border: none;
   color: white;
   cursor: pointer;
 }
 
+/* -----------------------------------
+   Navigation Links
+----------------------------------- */
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 1em;
-  margin: 0em 0em 0em 11em;
+  align-items: center;
   padding: 0;
+}
+
+.nav-links li {
+  position: relative;
 }
 
 .nav-links a {
   color: white;
   text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
 
-#nav-rabbit {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  object-fit: cover;
+.nav-links a:hover,
+.nav-links a:focus {
+  color: #DDB944;
 }
 
-.nav-links li .dropdown {
+/* -----------------------------------
+   Dropdown Menu
+----------------------------------- */
+.dropdown {
   display: none;
   position: absolute;
-  background-color: #064420;
   top: 100%;
   left: 0;
+  background-color: #174417;
   list-style: none;
   padding: 0;
   margin: 0;
   min-width: 180px;
-  z-index: 1000;
+  border-radius: 4px;
+  overflow: hidden;
+  z-index: 2000;
 }
 
-.nav-links li .dropdown li a {
+.dropdown li a {
+  display: block;
   padding: 0.5rem 1rem;
+  color: white;
+  text-align: left;
 }
 
-.nav-links li:hover .dropdown,
-.nav-links li:focus-within .dropdown {
+.dropdown li a:hover,
+.dropdown li a:focus {
+  background-color: #2E882E; /* lighter green highlight */
+}
+
+/* Show dropdown on hover or keyboard focus */
+.nav-left li:hover .dropdown,
+.nav-left li:focus-within .dropdown {
   display: block;
 }
 
+/* -----------------------------------
+   Decorative Rabbit
+----------------------------------- */
+#nav-rabbit {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 1em 0 0 auto;
+}
+
+/* -----------------------------------
+   Instagram Link
+----------------------------------- */
+.nav-instagram a {
+  color: #DDB944;
+  font-weight: bold;
+}
+
+.nav-instagram a:hover,
+.nav-instagram a:focus {
+  color: #BC9D22;
+}
+
+/* -----------------------------------
+   Book Button (outside nav, separate section)
+----------------------------------- */
 #book-button {
   text-align: center;
   margin: 2em 0;
 }
 
 #book-button button {
-  background-color: #1A4D1A; /* dark green */
+  background-color: #1A4D1A;
   color: white;
   font-size: 1.2em;
   padding: 0.6em 1.5em;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 #book-button button:hover {
-  background-color: #145014; /* slightly lighter green */
+  background-color: #145014;
 }
 
-
-/* Mobile styles */
+/* -----------------------------------
+   Mobile Styles
+----------------------------------- */
 @media (max-width: 768px) {
-  .nav-toggle {
-    display: block;
-  }
-  .nav-links {
+  .nav-menu {
     display: none;
     flex-direction: column;
-    background-color: #1A4D1A;
     width: 100%;
-    text-align: center;
+    padding: 1em 0;
+    background-color: #1A4D1A;
   }
-  .nav-links.active {
+
+  .nav-menu.active {
     display: flex;
   }
-  .nav-links li .dropdown {
-    position: static;
+
+  .dropdown {
+    position: static; /* stack dropdowns inside menu on mobile */
   }
+
+  #nav-rabbit {
+    margin: 1em auto; /* centers rabbit in vertical menu */
+  }
+
   .nav-instagram {
     margin-top: 1em;
   }

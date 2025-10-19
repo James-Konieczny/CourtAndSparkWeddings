@@ -48,9 +48,20 @@ function buildNavigation(config) {
   toggleBtn.innerHTML = "☰";
   navWrapper.appendChild(toggleBtn); // Nest the button inside the nav
 
-  const navList = document.createElement("ul"); // Create the list to hold navigation links
-  navList.classList.add("nav-links");
-  navList.id = "nav-links";
+  const navMenu = document.createElement("div");
+  navMenu.classList.add("nav-menu");
+  navMenu.id = "nav-links";
+
+  const navListLeft = document.createElement("ul"); // Create the list to hold nav links
+  navListLeft.classList.add("nav-links", "nav-left");
+  navListLeft.id = "nav-links-left";
+
+  const navListRight = document.createElement("ul"); // Create the list to hold right-aligned nav items
+  navListRight.classList.add("nav-links", "nav-right");
+  navListRight.id = "nav-links-right";
+
+  navMenu.appendChild(navListLeft);
+  navMenu.appendChild(navListRight);
 
   config.links.forEach(link => { // Loop through each link in the config
     const li = document.createElement("li");
@@ -81,7 +92,7 @@ function buildNavigation(config) {
       li.appendChild(a); // Nest the link inside the list item
     }
 
-    navList.appendChild(li);
+    navListLeft.appendChild(li);
   });
 
   const rabbitItem = document.createElement("li"); // Decorative rabbit logo
@@ -91,7 +102,7 @@ function buildNavigation(config) {
   rabbitImg.alt = config.rabbit.alt;
   rabbitImg.id = config.rabbit.id;
   rabbitItem.appendChild(rabbitImg);
-  navList.appendChild(rabbitItem);
+  navListRight.appendChild(rabbitItem);
 
   const instaItem = document.createElement("li"); // Instagram link
   instaItem.classList.add("nav-instagram");
@@ -102,33 +113,34 @@ function buildNavigation(config) {
   instaLink.setAttribute("rel", "noopener noreferrer");
   instaLink.setAttribute("aria-label", "Visit our Instagram page (opens in new tab)");
   instaItem.appendChild(instaLink);
-  navList.appendChild(instaItem);
+  navListRight.appendChild(instaItem);
 
-  navWrapper.appendChild(navList); // Nest the nav list inside the nav
+  navWrapper.appendChild(navMenu); // Nest the navToggle div inside the nav
   headerEl.appendChild(navWrapper); // Finally, nest the entire nav inside the header
 
   // --- Event Listeners for Interactivity ---
 
   toggleBtn.addEventListener("click", () => { // Toggle menu visibility on button click
-    const isExpanded = navList.classList.toggle("active");
+    const isExpanded = !navMenu.classList.contains("active");
+    navMenu.classList.toggle("active", isExpanded);
     toggleBtn.setAttribute("aria-expanded", isExpanded.toString());
     
   
-    if (isExpanded) { // If menu is now open, focus the first link
-      const firstLink = navList.querySelector('a');
-      if (firstLink) firstLink.focus();
-    }
+    // if (isExpanded) { // If menu is now open, focus the first link
+    //   const firstLink = navListLeft.querySelector('a');
+    //   if (firstLink) firstLink.focus();
+    // }
   });
 
   document.addEventListener("keydown", (e) => { // Close menu on Escape key press
-    if (e.key === "Escape" && navList.classList.contains("active")) {
-      navList.classList.remove("active");
+    if (e.key === "Escape") {
+      navMenu.classList.remove("active");
       toggleBtn.setAttribute("aria-expanded", "false");
       toggleBtn.focus();
     }
   });
 
-  navList.querySelectorAll("li").forEach(li => { // Keyboard navigation for dropdowns
+  navListLeft.querySelectorAll("li").forEach(li => { // Keyboard navigation for dropdowns
     const submenu = li.querySelector(".dropdown");
     if (submenu) {
       const link = li.querySelector("a");
